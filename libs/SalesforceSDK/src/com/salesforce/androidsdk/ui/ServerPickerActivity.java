@@ -139,9 +139,7 @@ public class ServerPickerActivity extends Activity implements
          */
         final Button addConnectionButton = findViewById(R.id.sf__show_custom_url_edit);
         if (addConnectionButton != null) {
-            if (RuntimeConfig.getRuntimeConfig(this).getBoolean(RuntimeConfig.ConfigKey.OnlyShowAuthorizedHosts)) {
-                addConnectionButton.setVisibility(View.GONE);
-            }
+            addConnectionButton.setVisibility(View.GONE);
         }
         final RadioGroup radioGroup = findViewById(getServerListGroupId());
         radioGroup.setOnCheckedChangeListener(this);
@@ -171,12 +169,7 @@ public class ServerPickerActivity extends Activity implements
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.sf__menu_clear_custom_url) {
-            clearCustomUrlSetting();
-            return true;
-        } else {
-            return super.onOptionsItemSelected(item);
-        }
+        return super.onOptionsItemSelected(item);
     }
 
     /**

@@ -9,7 +9,8 @@ import org.apache.tools.ant.taskdefs.condition.Os
  */
 project.ext.react = [
         entryFile: "index.js",
-        enableHermes: false
+        enableHermes: false,
+        enableVmCleanup: false
 ]
 def useIntlJsc = false
 def jscFlavor = 'org.webkit:android-jsc:+'

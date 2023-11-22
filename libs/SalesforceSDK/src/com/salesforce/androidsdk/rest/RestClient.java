@@ -282,7 +282,14 @@ public class RestClient {
 	public String getRefreshToken() {
 		return oAuthRefreshInterceptor.getRefreshToken();
 	}
-	
+		/**
+	 * @return The accessToken token, if available.
+	 */
+
+	 public void setAccessToken(String accessToken ) {
+		oAuthRefreshInterceptor.setAuthToken(accessToken);
+		
+			}
 	/**
 	 * @return The client info.
 	 */
